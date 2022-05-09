@@ -125,20 +125,12 @@ const Keyboard = {
           keyElement.appendChild(divider);
 
             keyElement.addEventListener('mousedown', () => {
-              if (this.properties.translated) {
-                console.log( keyLayout )
-                keyLayout.splice(0, 14, ...rusRow);
-                console.log( keyLayout )
-                this.createKeys();
-                // Вызвать метод который перерисоывает клаву
-                keyElement.classList.toggle(this.properties.capsLock);
                 this.toggleTranslate()
                 this.toggleCapslock();
-              }
             });
+
             keyElement.addEventListener('mouseup', () => {
               this.toggleCapslock();
-              keyElement.classList.toggle(this.properties.capsLock);
             });
            
           break;
@@ -151,12 +143,10 @@ const Keyboard = {
 
           keyElement.addEventListener('mousedown', () => {
             this.toggleCapslock();
-            keyElement.classList.toggle(this.properties.capsLock);
           });
 
           keyElement.addEventListener('mouseup', () => {
             this.toggleCapslock();
-            keyElement.classList.toggle(this.properties.capsLock);
           });
           break;
 
@@ -206,7 +196,7 @@ const Keyboard = {
 
           keyElement.addEventListener('click', () => {
             this.toggleCapslock();
-            keyElement.classList.toggle('keyboard__key_active', this.properties.capsLock);
+            keyElement.classList.toggle('keyboard__key_active');
           });
 
           break;
