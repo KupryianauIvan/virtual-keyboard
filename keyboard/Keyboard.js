@@ -279,7 +279,6 @@ const Keyboard = {
 
 window.addEventListener('DOMContentLoaded', () => {
   Keyboard.init();
+  console.log( 'Sorry, link to PR https://github.com/KupryianauIvan/virtual-keyboard/pull/2' )
 })
 
-
-console.log( 'Sorry, link to PR https://github.com/KupryianauIvan/virtual-keyboard/pull/2' )
