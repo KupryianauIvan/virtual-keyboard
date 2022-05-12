@@ -21,9 +21,6 @@ const Keyboard = {
   },
 
   init() {
-    /* Будем запускаться как только страница загрузится
-    Инициализировать клавиатуру */
-    // Create Main elements
     this.elements.main = document.createElement('div');
     this.elements.main.classList.add('keyboard');
     
@@ -41,11 +38,9 @@ const Keyboard = {
     
     this.elements.textarea = document.createElement('textarea');
     this.elements.textarea.classList.add('textarea');
-    // Setup main elements
 
     this.elements.keys = this.elements.keysContainer.querySelectorAll('.keyboard__key');
 
-    // Add to DOM
 
     this.elements.main.appendChild(this.elements.textarea);
     this.elements.main.appendChild(this.elements.keysContainer);
@@ -53,10 +48,7 @@ const Keyboard = {
     this.elements.main.appendChild(this.elements.heading);
     document.body.appendChild(this.elements.main);
 
-    /* //Automatically use keyboard for elements with .use-keyboard-input */
-    // this.elements.textarea.addEventListener('focus' () => {
 
-    // })
     this.elements.textarea.addEventListener('focus', () => {
       this.open(this.elements.textarea.value, currentValue => {
         this.elements.textarea.value = currentValue;
@@ -98,7 +90,6 @@ const Keyboard = {
       const rusRow = ['Ё', '!', '"', '№', ';', '%', ':', '?', '*', '(', ')', '-', '+', 'backspace'];
       const enRow = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', 'backspace'];
 
-      // Add attributes/classes
       keyElement.setAttribute('type', 'button');
       keyElement.classList.add('keyboard__key');
 
@@ -289,3 +280,6 @@ const Keyboard = {
 window.addEventListener('DOMContentLoaded', () => {
   Keyboard.init();
 })
+
+
+console.log( 'Sorry, link to PR https://github.com/KupryianauIvan/virtual-keyboard/pull/2' )
